@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <title>Jinyao DeSandies | Econ of Crime Portfolio</title>
+  <title>Jinyao DeSandies | Project Portfolio</title>
 
   <link rel="stylesheet" href="styles.css" />
 
@@ -18,8 +18,8 @@
       <a href="index.html" class="logo">Jinyao DeSandies</a>
 
       <div class="nav-links">
-        <a href="#projects">Projects</a>
         <a href="#research">Research</a>
+        <a href="#projects">Projects</a>
         <a href="writeups.html">Write-Ups</a>
         <a href="resume.html">Resume</a>
         <a href="#contact">Contact</a>
@@ -28,26 +28,25 @@
 
     <!-- =====================================================
          EDIT HOMEPAGE INTRO HERE
-         Change your name, class, portfolio description, and buttons.
+         Change your name, tagline, portfolio description, and buttons.
     ===================================================== -->
     <section class="hero">
-      <p class="eyebrow">Pomona College · Economics · Econ 120</p>
+      <p class="eyebrow">Pomona College · Project Portfolio</p>
 
-      <h1>Crime, Data, and Economic Analysis</h1>
+      <h1>Projects across data, science, and economics</h1>
 
       <p class="hero-text">
-        I am Jinyao DeSandies, a freshman at Pomona College taking Econ 120:
-        Economics of Crime. This portfolio presents six Tableau dashboards exploring
-        campus crime in Florida, incarceration in Florida, U.S. crime trends, gun
-        violence, global terrorism, and an independent crime data project on crimes
-        against humanity.
+        I am Jinyao DeSandies, a student at Pomona College. This portfolio brings together
+        my work across disciplines — from computational neuroscience research and fluid-dynamics
+        modeling to a data-visualization series on the economics of crime — pairing each project
+        with the methods and reasoning behind it.
       </p>
 
       <div class="hero-buttons">
-        <a href="#projects" class="button primary">View Dashboards</a>
-        <a href="#research" class="button secondary">View Research</a>
-        <a href="writeups.html" class="button secondary">View Write-Ups</a>
-        <a href="resume.html" class="button secondary">View Resume</a>
+        <a href="#research" class="button primary">Featured Research</a>
+        <a href="#projects" class="button secondary">Data Projects</a>
+        <a href="writeups.html" class="button secondary">Write-Ups</a>
+        <a href="resume.html" class="button secondary">Resume</a>
       </div>
     </section>
   </header>
@@ -55,220 +54,22 @@
   <main>
     <!-- =====================================================
          EDIT PORTFOLIO OVERVIEW HERE
-         This is the short explanation before the dashboard modules.
+         This is the short explanation of what the portfolio covers.
     ===================================================== -->
     <section class="intro-section">
-      <h2>Portfolio Overview</h2>
+      <h2>About This Portfolio</h2>
 
       <p>
-        These dashboards summarize different dimensions of crime and criminal justice,
-        including university campus crime, incarceration patterns, national crime trends,
-        gun violence, global terrorism, and an independent project analysis.
+        This site collects projects spanning computational neuroscience, data visualization,
+        and economic analysis. Each project pairs a deliverable — a research poster, an
+        interactive dashboard, or a written report — with the methods and reasoning behind it.
       </p>
 
       <p>
-        Each dashboard is paired with a written project report explaining the dataset,
-        visualization choices, economic reasoning, and major findings.
-        <a href="writeups.html">View the full write-ups here.</a>
+        Highlights include a 3D computational fluid model of neuro-vascular coupling built during
+        a summer research fellowship at Brown University, and a six-part Tableau series analyzing
+        crime and criminal-justice data. <a href="writeups.html">Read the full write-ups here.</a>
       </p>
-    </section>
-
-    <!-- =====================================================
-         EDIT DASHBOARD PROJECTS HERE
-         Each project has:
-         1. project number
-         2. project title
-         3. project description
-         4. Tableau embed link
-    ===================================================== -->
-    <section id="projects" class="projects-section">
-      <h2>Tableau Dashboard Projects</h2>
-
-      <!-- =========================
-           EDIT PROJECT 1 HERE
-           Dashboard: Florida campus crime
-      ========================= -->
-      <article id="dashboard-1" class="project-card project-campus">
-        <div class="project-copy">
-          <p class="project-number">Project 1</p>
-          <h3>Common Crimes in Florida’s University Campuses</h3>
-          <p>
-            This dashboard examines common types of crimes reported across university
-            campuses in Florida, helping compare public safety patterns across institutions.
-          </p>
-
-          <p>
-            <a href="writeups/project-1.html">
-              Read Project 1 Write-Up
-            </a>
-          </p>
-        </div>
-
-        <div class="tableau-frame">
-          <tableau-viz
-            src="https://public.tableau.com/views/Project1CampusCrimeinFlorida/CommonCrimesinFloridasUniversityCampuses"
-            toolbar="bottom"
-            hide-tabs
-            width="850"
-            height="1127">
-          </tableau-viz>
-        </div>
-      </article>
-
-      <!-- =========================
-           EDIT PROJECT 2 HERE
-           Dashboard: Florida incarceration
-      ========================= -->
-      <article id="dashboard-2" class="project-card project-incarceration">
-        <div class="project-copy">
-          <p class="project-number">Project 2</p>
-          <h3>Incarceration in Florida</h3>
-          <p>
-            This dashboard explores incarceration in Florida, connecting criminal justice
-            outcomes with demographic, geographic, or institutional patterns.
-          </p>
-
-          <p>
-            <a href="writeups/project-2.html">
-              Read Project 2 Write-Up
-            </a>
-          </p>
-        </div>
-
-        <div class="tableau-frame">
-          <tableau-viz
-            src="https://public.tableau.com/views/Project2IncarcerationinFlorida/Dashboard"
-            toolbar="bottom"
-            hide-tabs
-            width="850"
-            height="1127">
-          </tableau-viz>
-        </div>
-      </article>
-
-      <!-- =========================
-           EDIT PROJECT 3 HERE
-           Dashboard: U.S. crime trends
-      ========================= -->
-      <article id="dashboard-3" class="project-card project-us-crime">
-        <div class="project-copy">
-          <p class="project-number">Project 3</p>
-          <h3>U.S. Crime Trends</h3>
-          <p>
-            This dashboard places crime trends in a broader national context, allowing
-            comparison across time, category, and geography.
-          </p>
-
-          <p>
-            <a href="writeups/project-3.html">
-              Read Project 3 Write-Up
-            </a>
-          </p>
-        </div>
-
-        <div class="tableau-frame">
-          <tableau-viz
-            src="https://public.tableau.com/views/USCrimeTrends_17733838628180/Dashboard1"
-            toolbar="bottom"
-            hide-tabs
-            width="850"
-            height="1127">
-          </tableau-viz>
-        </div>
-      </article>
-
-      <!-- =========================
-           EDIT PROJECT 4 HERE
-           Dashboard: Gun violence
-      ========================= -->
-      <article id="dashboard-4" class="project-card project-gun">
-        <div class="project-copy">
-          <p class="project-number">Project 4</p>
-          <h3>Gun Violence in the U.S.</h3>
-          <p>
-            This dashboard focuses on gun violence as a public safety and criminal justice
-            issue, highlighting patterns that can be analyzed through economic and policy lenses.
-          </p>
-
-          <p>
-            <a href="writeups/project-4.html">
-              Read Project 4 Write-Up
-            </a>
-          </p>
-        </div>
-
-        <div class="tableau-frame">
-          <tableau-viz
-            src="https://public.tableau.com/views/Project4_17745109672220/GunViolenceintheUS"
-            toolbar="bottom"
-            hide-tabs
-            width="850"
-            height="1127">
-          </tableau-viz>
-        </div>
-      </article>
-
-      <!-- =========================
-           EDIT PROJECT 5 HERE
-           Dashboard: Global terrorism
-      ========================= -->
-      <article id="dashboard-5" class="project-card project-terrorism">
-        <div class="project-copy">
-          <p class="project-number">Project 5</p>
-          <h3>Global Terrorism</h3>
-          <p>
-            This dashboard examines terrorism through a global dataset, connecting violence,
-            geography, and political instability to broader questions about crime and security.
-          </p>
-
-          <p>
-            <a href="writeups/project-5.html">
-              Read Project 5 Write-Up
-            </a>
-          </p>
-        </div>
-
-        <div class="tableau-frame">
-          <tableau-viz
-            src="https://public.tableau.com/views/Project5GlobalTerrorism_17757957591510/Dashboard1"
-            toolbar="bottom"
-            hide-tabs
-            width="850"
-            height="1127">
-          </tableau-viz>
-        </div>
-      </article>
-
-      <!-- =========================
-           EDIT PROJECT 6 HERE
-           Dashboard: Independent project
-      ========================= -->
-      <article id="dashboard-6" class="project-card project-independent">
-        <div class="project-copy">
-          <p class="project-number">Project 6</p>
-          <h3>Independent Project: Crimes Against Humanity</h3>
-          <p>
-            This independent dashboard extends the course themes through a self-directed
-            analysis of crimes against humanity and mass atrocity data.
-          </p>
-
-          <p>
-            <a href="writeups/project-6.html">
-              Read Project 6 Write-Up
-            </a>
-          </p>
-        </div>
-
-        <div class="tableau-frame">
-          <tableau-viz
-            src="https://public.tableau.com/views/IndependantProjectUpload/Dashboard1"
-            toolbar="bottom"
-            hide-tabs
-            width="850"
-            height="1127">
-          </tableau-viz>
-        </div>
-      </article>
     </section>
 
     <!-- =====================================================
@@ -280,12 +81,13 @@
          4. downloadable poster (assets/rush-neurovascular-poster.pptx)
     ===================================================== -->
     <section id="research" class="research-section">
-      <h2>Research</h2>
+      <p class="eyebrow">Computational Neuroscience</p>
+      <h2>Featured Research</h2>
 
       <p class="research-intro">
-        Beyond the Economics of Crime coursework, I conducted computational
-        neuroscience research at Brown University&rsquo;s Carney Center for Brain Science
-        as a Carney Summer Scholar.
+        As a Carney Summer Scholar at Brown University&rsquo;s Carney Center for Brain Science,
+        I conducted computational neuroscience research modeling how the brain manages heat and
+        chemical signaling.
       </p>
 
       <article class="research-card">
@@ -328,6 +130,217 @@
           </p>
         </div>
       </article>
+    </section>
+
+    <!-- =====================================================
+         EDIT DATA-VISUALIZATION PROJECT COLLECTION HERE
+         The Economics of Crime Tableau dashboard series.
+         Each project has:
+         1. project number
+         2. project title
+         3. project description
+         4. Tableau embed link
+    ===================================================== -->
+    <section id="projects" class="project-collection">
+      <div class="collection-intro">
+        <p class="eyebrow">Data Visualization</p>
+        <h2>Economics of Crime · Tableau Dashboard Series</h2>
+        <p>
+          A six-part interactive dashboard series built for Econ 120: Economics of Crime at
+          Pomona College, analyzing campus crime, incarceration, national crime trends, gun
+          violence, global terrorism, and an independent project on crimes against humanity.
+          Each dashboard is paired with a written report in the
+          <a href="writeups.html">Write-Ups</a> section.
+        </p>
+      </div>
+
+      <div class="projects-section">
+        <!-- =========================
+             EDIT PROJECT 1 HERE
+             Dashboard: Florida campus crime
+        ========================= -->
+        <article id="dashboard-1" class="project-card project-campus">
+          <div class="project-copy">
+            <p class="project-number">Project 1</p>
+            <h3>Common Crimes in Florida’s University Campuses</h3>
+            <p>
+              This dashboard examines common types of crimes reported across university
+              campuses in Florida, helping compare public safety patterns across institutions.
+            </p>
+
+            <p>
+              <a href="writeups/project-1.html">
+                Read Project 1 Write-Up
+              </a>
+            </p>
+          </div>
+
+          <div class="tableau-frame">
+            <tableau-viz
+              src="https://public.tableau.com/views/Project1CampusCrimeinFlorida/CommonCrimesinFloridasUniversityCampuses"
+              toolbar="bottom"
+              hide-tabs
+              width="850"
+              height="1127">
+            </tableau-viz>
+          </div>
+        </article>
+
+        <!-- =========================
+             EDIT PROJECT 2 HERE
+             Dashboard: Florida incarceration
+        ========================= -->
+        <article id="dashboard-2" class="project-card project-incarceration">
+          <div class="project-copy">
+            <p class="project-number">Project 2</p>
+            <h3>Incarceration in Florida</h3>
+            <p>
+              This dashboard explores incarceration in Florida, connecting criminal justice
+              outcomes with demographic, geographic, or institutional patterns.
+            </p>
+
+            <p>
+              <a href="writeups/project-2.html">
+                Read Project 2 Write-Up
+              </a>
+            </p>
+          </div>
+
+          <div class="tableau-frame">
+            <tableau-viz
+              src="https://public.tableau.com/views/Project2IncarcerationinFlorida/Dashboard"
+              toolbar="bottom"
+              hide-tabs
+              width="850"
+              height="1127">
+            </tableau-viz>
+          </div>
+        </article>
+
+        <!-- =========================
+             EDIT PROJECT 3 HERE
+             Dashboard: U.S. crime trends
+        ========================= -->
+        <article id="dashboard-3" class="project-card project-us-crime">
+          <div class="project-copy">
+            <p class="project-number">Project 3</p>
+            <h3>U.S. Crime Trends</h3>
+            <p>
+              This dashboard places crime trends in a broader national context, allowing
+              comparison across time, category, and geography.
+            </p>
+
+            <p>
+              <a href="writeups/project-3.html">
+                Read Project 3 Write-Up
+              </a>
+            </p>
+          </div>
+
+          <div class="tableau-frame">
+            <tableau-viz
+              src="https://public.tableau.com/views/USCrimeTrends_17733838628180/Dashboard1"
+              toolbar="bottom"
+              hide-tabs
+              width="850"
+              height="1127">
+            </tableau-viz>
+          </div>
+        </article>
+
+        <!-- =========================
+             EDIT PROJECT 4 HERE
+             Dashboard: Gun violence
+        ========================= -->
+        <article id="dashboard-4" class="project-card project-gun">
+          <div class="project-copy">
+            <p class="project-number">Project 4</p>
+            <h3>Gun Violence in the U.S.</h3>
+            <p>
+              This dashboard focuses on gun violence as a public safety and criminal justice
+              issue, highlighting patterns that can be analyzed through economic and policy lenses.
+            </p>
+
+            <p>
+              <a href="writeups/project-4.html">
+                Read Project 4 Write-Up
+              </a>
+            </p>
+          </div>
+
+          <div class="tableau-frame">
+            <tableau-viz
+              src="https://public.tableau.com/views/Project4_17745109672220/GunViolenceintheUS"
+              toolbar="bottom"
+              hide-tabs
+              width="850"
+              height="1127">
+            </tableau-viz>
+          </div>
+        </article>
+
+        <!-- =========================
+             EDIT PROJECT 5 HERE
+             Dashboard: Global terrorism
+        ========================= -->
+        <article id="dashboard-5" class="project-card project-terrorism">
+          <div class="project-copy">
+            <p class="project-number">Project 5</p>
+            <h3>Global Terrorism</h3>
+            <p>
+              This dashboard examines terrorism through a global dataset, connecting violence,
+              geography, and political instability to broader questions about crime and security.
+            </p>
+
+            <p>
+              <a href="writeups/project-5.html">
+                Read Project 5 Write-Up
+              </a>
+            </p>
+          </div>
+
+          <div class="tableau-frame">
+            <tableau-viz
+              src="https://public.tableau.com/views/Project5GlobalTerrorism_17757957591510/Dashboard1"
+              toolbar="bottom"
+              hide-tabs
+              width="850"
+              height="1127">
+            </tableau-viz>
+          </div>
+        </article>
+
+        <!-- =========================
+             EDIT PROJECT 6 HERE
+             Dashboard: Independent project
+        ========================= -->
+        <article id="dashboard-6" class="project-card project-independent">
+          <div class="project-copy">
+            <p class="project-number">Project 6</p>
+            <h3>Independent Project: Crimes Against Humanity</h3>
+            <p>
+              This independent dashboard extends the course themes through a self-directed
+              analysis of crimes against humanity and mass atrocity data.
+            </p>
+
+            <p>
+              <a href="writeups/project-6.html">
+                Read Project 6 Write-Up
+              </a>
+            </p>
+          </div>
+
+          <div class="tableau-frame">
+            <tableau-viz
+              src="https://public.tableau.com/views/IndependantProjectUpload/Dashboard1"
+              toolbar="bottom"
+              hide-tabs
+              width="850"
+              height="1127">
+            </tableau-viz>
+          </div>
+        </article>
+      </div>
     </section>
 
     <!-- =====================================================

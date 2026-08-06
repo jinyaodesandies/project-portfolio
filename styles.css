@@ -201,8 +201,27 @@ h3 {
 .writeup-copy{
   margin: 0 auto 40px;
 }
+
+/* Wrapper around a titled collection of project cards */
+.project-collection {
+  margin-top: 8px;
+}
+
+.collection-intro {
+  max-width: 820px;
+  margin: 0 auto 8px;
+}
+
+.collection-intro .eyebrow {
+  margin-bottom: 10px;
+}
+
+.collection-intro p:last-child {
+  color: var(--muted-text);
+}
+
 .projects-section {
-  margin-top: 48px;
+  margin-top: 40px;
   display: grid;
   gap: 64px;
 }
