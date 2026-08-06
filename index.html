@@ -6,6 +6,13 @@
 
   <title>Jinyao DeSandies | Project Portfolio</title>
 
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&display=swap"
+    rel="stylesheet"
+  />
+
   <link rel="stylesheet" href="styles.css" />
 
   <!-- Tableau Embedding API v3 -->
@@ -13,7 +20,7 @@
 </head>
 
 <body>
-  <header class="site-header">
+  <div class="nav-bar">
     <nav class="nav">
       <a href="index.html" class="logo">Jinyao DeSandies</a>
 
@@ -25,7 +32,9 @@
         <a href="#contact">Contact</a>
       </div>
     </nav>
+  </div>
 
+  <header class="site-header">
     <!-- =====================================================
          EDIT HOMEPAGE INTRO HERE
          Change your name, tagline, portfolio description, and buttons.
@@ -353,38 +362,40 @@
         For academic, research, or resume inquiries, contact me at:
       </p>
 
-      <p>
-        Email:
-        <a href="mailto:jinyaodesandies@gmail.com">jinyaodesandies@gmail.com</a>
-      </p>
+      <ul class="contact-list">
+        <li>
+          <span class="contact-label">Email</span>
+          <a href="mailto:jinyaodesandies@gmail.com">jinyaodesandies@gmail.com</a>
+        </li>
 
-      <p>
-        GitHub:
-        <a href="https://github.com/jinyaodesandies" target="_blank" rel="noopener noreferrer">
-          github.com/jinyaodesandies
-        </a>
-      </p>
+        <li>
+          <span class="contact-label">GitHub</span>
+          <a href="https://github.com/jinyaodesandies" target="_blank" rel="noopener noreferrer">
+            github.com/jinyaodesandies
+          </a>
+        </li>
 
-      <p>
-        LinkedIn:
-        <a href="https://www.linkedin.com/in/jinyaodesandies/" target="_blank" rel="noopener noreferrer">
-          linkedin.com/in/jinyaodesandies
-        </a>
-      </p>
+        <li>
+          <span class="contact-label">LinkedIn</span>
+          <a href="https://www.linkedin.com/in/jinyaodesandies/" target="_blank" rel="noopener noreferrer">
+            linkedin.com/in/jinyaodesandies
+          </a>
+        </li>
 
-      <p>
-        Tableau Public:
-        <a href="https://public.tableau.com/app/profile/jinyao.desandies/vizzes" target="_blank" rel="noopener noreferrer">
-          public.tableau.com/app/profile/jinyao.desandies/vizzes
-        </a>
-      </p>
+        <li>
+          <span class="contact-label">Tableau Public</span>
+          <a href="https://public.tableau.com/app/profile/jinyao.desandies/vizzes" target="_blank" rel="noopener noreferrer">
+            public.tableau.com/app/profile/jinyao.desandies/vizzes
+          </a>
+        </li>
 
-      <p>
-        ORCID:
-        <a href="https://orcid.org/0009-0008-4385-554X" target="_blank" rel="noopener noreferrer">
-          orcid.org/0009-0008-4385-554X
-        </a>
-      </p>
+        <li>
+          <span class="contact-label">ORCID</span>
+          <a href="https://orcid.org/0009-0008-4385-554X" target="_blank" rel="noopener noreferrer">
+            orcid.org/0009-0008-4385-554X
+          </a>
+        </li>
+      </ul>
     </section>
   </main>
 

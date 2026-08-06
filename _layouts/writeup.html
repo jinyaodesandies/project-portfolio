@@ -6,11 +6,18 @@
 
   <title>{{ page.title }} | Jinyao DeSandies</title>
 
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&display=swap"
+    rel="stylesheet"
+  />
+
   <link rel="stylesheet" href="../styles.css" />
 </head>
 
 <body>
-  <header class="site-header small-header">
+  <div class="nav-bar">
     <nav class="nav">
       <a href="../index.html" class="logo">Jinyao DeSandies</a>
 
@@ -22,13 +29,13 @@
         <a href="../index.html#contact">Contact</a>
       </div>
     </nav>
-  </header>
+  </div>
 
   <main class="writeup-page-main">
     <section class="writeup-hero-card {{ page.project_class }}">
       <p class="project-number">{{ page.project_number }}</p>
 
-      <h4>{{ page.title }}</h4>
+      <h1>{{ page.title }}</h1>
 
       <p>
         {{ page.description }}
