@@ -1,23 +1,23 @@
 /* =========================================================
    DESIGN TOKENS
    One place to tune the whole site: color, type, spacing.
-   Style: warm academic paper + ink, deep navy accent.
+   Style: bamboo paper + green-black ink, bamboo-leaf accent.
 ========================================================= */
 
 :root {
   /* Color */
-  --bg: #faf9f6;
-  --surface: #ffffff;
-  --surface-tint: #f3f0e9;
-  --ink: #24292f;
-  --heading: #14181d;
-  --muted: #5b6470;
-  --accent: #29567d;
-  --accent-dark: #1c3d5c;
-  --accent-deep: #122a3f;
-  --accent-tint: #e8eff5;
-  --border: #e7e2d8;
-  --border-strong: #d6cfc2;
+  --bg: #f4f4e8;
+  --surface: #fcfcf4;
+  --surface-tint: #ecedda;
+  --ink: #2a3028;
+  --heading: #1c231b;
+  --muted: #5d665a;
+  --accent: #3f6d49;
+  --accent-dark: #2f5439;
+  --accent-deep: #1e3a28;
+  --accent-tint: #e2ead9;
+  --border: #dee1c9;
+  --border-strong: #c6cca9;
 
   /* Type */
   --font-display: "Fraunces", Georgia, "Times New Roman", serif;
@@ -26,9 +26,9 @@
   --font-prose: Charter, Georgia, "Times New Roman", serif;
 
   /* Effects */
-  --shadow-sm: 0 1px 2px rgba(20, 24, 29, 0.05);
-  --shadow-md: 0 1px 2px rgba(20, 24, 29, 0.05),
-    0 14px 34px -14px rgba(20, 24, 29, 0.14);
+  --shadow-sm: 0 1px 2px rgba(28, 35, 27, 0.05);
+  --shadow-md: 0 1px 2px rgba(28, 35, 27, 0.05),
+    0 14px 34px -14px rgba(28, 35, 27, 0.16);
   --radius: 12px;
   --radius-lg: 18px;
 
@@ -141,7 +141,7 @@ p {
   position: sticky;
   top: 0;
   z-index: 50;
-  background: rgba(250, 249, 246, 0.85);
+  background: rgba(244, 244, 232, 0.85);
   -webkit-backdrop-filter: blur(12px) saturate(1.5);
   backdrop-filter: blur(12px) saturate(1.5);
   border-bottom: 1px solid var(--border);
@@ -195,15 +195,54 @@ p {
 .site-header {
   background: linear-gradient(
       to bottom,
-      rgba(250, 249, 246, 0),
-      rgba(250, 249, 246, 0.6)
+      rgba(244, 244, 232, 0),
+      rgba(244, 244, 232, 0.6)
     ),
     radial-gradient(
       120% 130% at 85% -20%,
-      rgba(41, 86, 125, 0.09),
+      rgba(63, 109, 73, 0.12),
       transparent 55%
+    ),
+    radial-gradient(
+      90% 120% at 0% 115%,
+      rgba(63, 109, 73, 0.07),
+      transparent 50%
     );
   border-bottom: 1px solid var(--border);
+}
+
+/* Homepage hero: the name alone on bamboo paper */
+.home-hero {
+  padding: clamp(96px, 17vh, 180px) 24px;
+  display: flex;
+  align-items: center;
+}
+
+.hero-name {
+  display: flex;
+  align-items: center;
+  gap: clamp(18px, 3.5vw, 34px);
+  max-width: none;
+  font-size: clamp(3.1rem, 9vw, 6.2rem);
+  line-height: 1;
+  letter-spacing: -0.025em;
+  font-weight: 600;
+}
+
+/* 锦尧 set as a seal stamp: vertical characters, bamboo green */
+.hero-seal {
+  writing-mode: vertical-rl;
+  font-family: "Noto Serif SC", var(--font-display), serif;
+  font-weight: 600;
+  font-size: 0.38em;
+  line-height: 1.08;
+  letter-spacing: 0.1em;
+  color: var(--bg);
+  background: var(--accent-dark);
+  padding: 0.5em 0.32em;
+  border-radius: 0.16em;
+  box-shadow: inset 0 0 0 1px rgba(244, 244, 232, 0.45),
+    0 10px 24px -12px rgba(30, 58, 40, 0.55);
 }
 
 .hero {
@@ -328,11 +367,11 @@ main > section + section {
   grid-template-columns: minmax(0, 5fr) minmax(0, 6fr);
   gap: 44px;
   align-items: center;
-  background: linear-gradient(140deg, #1a3a55 0%, #122a3f 55%, #0e2233 100%);
+  background: linear-gradient(140deg, #2d4d36 0%, #1e3a28 55%, #17301f 100%);
   border-radius: var(--radius-lg);
   padding: 44px;
   box-shadow: var(--shadow-md);
-  color: #c6d2dd;
+  color: #c9d6c3;
 }
 
 .research-card h3 {
@@ -342,11 +381,11 @@ main > section + section {
 }
 
 .research-card .project-number {
-  color: #93b0c7;
+  color: #9dbd9a;
 }
 
 .research-subtitle {
-  color: #a9bccb;
+  color: #aec4a9;
   font-style: italic;
   margin-bottom: 18px;
 }
@@ -356,7 +395,7 @@ main > section + section {
 }
 
 .research-meta {
-  color: #8199ac;
+  color: #8ba287;
   font-size: 0.88rem;
   margin-bottom: 0;
 }
@@ -378,19 +417,19 @@ main > section + section {
 }
 
 .research-card .button.primary {
-  background: #ffffff;
+  background: #f4f4e8;
   color: var(--accent-deep);
 }
 
 .research-card .button.primary:hover {
-  background: #e9eef3;
+  background: #e6e9d6;
   color: var(--accent-deep);
 }
 
 .research-card .button.secondary {
   background: transparent;
   border-color: rgba(255, 255, 255, 0.35);
-  color: #e8eef4;
+  color: #eaf0e4;
 }
 
 .research-card .button.secondary:hover {
@@ -485,7 +524,7 @@ main > section + section {
   width: 100%;
   overflow-x: auto;
   border-top: 1px solid var(--border);
-  background: #fbfaf7;
+  background: #fafaef;
   padding: 18px 0;
   display: flex;
   justify-content: flex-start; /* with auto margins on the child this
@@ -499,7 +538,7 @@ main > section + section {
   max-width: 100%;
   margin-left: auto;
   margin-right: auto;
-  background: #fbfaf7;
+  background: #fafaef;
 }
 
 /* =========================================================
@@ -773,6 +812,23 @@ main > section + section {
 }
 
 /* =========================================================
+   ABOUT / PORTFOLIO INTRO
+========================================================= */
+
+.about-section {
+  max-width: 720px;
+}
+
+.about-section p {
+  color: var(--muted);
+  font-size: 1.02rem;
+}
+
+.about-section .hero-buttons {
+  margin-top: 28px;
+}
+
+/* =========================================================
    CONTACT
 ========================================================= */
 
@@ -857,6 +913,10 @@ main > section + section {
     padding: 44px 20px 52px;
   }
 
+  .home-hero {
+    padding: 72px 20px 80px;
+  }
+
   .resume-hero {
     padding: 36px 20px 44px;
   }
@@ -930,5 +990,26 @@ main > section + section {
 
   .contact-label {
     flex: none;
+  }
+}
+
+/* =========================================================
+   REDUCED MOTION
+========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  .button,
+  .project-card,
+  .writeup-card {
+    transition: none;
+  }
+
+  .button:hover,
+  .writeup-card:hover {
+    transform: none;
   }
 }

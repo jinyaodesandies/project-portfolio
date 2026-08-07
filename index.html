@@ -12,6 +12,11 @@
     href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&display=swap"
     rel="stylesheet"
   />
+  <!-- Noto Serif SC, subset to the two characters of the seal: 锦尧 -->
+  <link
+    href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@600&text=%E9%94%A6%E5%B0%A7&display=swap"
+    rel="stylesheet"
+  />
 
   <link rel="stylesheet" href="styles.css" />
 
@@ -27,6 +32,7 @@
       <div class="nav-links">
         <a href="#research">Research</a>
         <a href="#projects">Projects</a>
+        <a href="#about">About</a>
         <a href="writeups.html">Write-Ups</a>
         <a href="resume.html">Resume</a>
         <a href="#contact">Contact</a>
@@ -36,51 +42,19 @@
 
   <header class="site-header">
     <!-- =====================================================
-         EDIT HOMEPAGE INTRO HERE
-         Change your name, tagline, portfolio description, and buttons.
+         EDIT HOMEPAGE HERO HERE
+         The homepage opens with the name alone; the portfolio
+         introduction lives in the About section further down.
     ===================================================== -->
-    <section class="hero">
-      <p class="eyebrow">Pomona College · Project Portfolio</p>
-
-      <h1>Projects across data, science, and economics</h1>
-
-      <p class="hero-text">
-        I am Jinyao DeSandies, a student at Pomona College. This portfolio brings together
-        my work across disciplines — from computational neuroscience research and fluid-dynamics
-        modeling to a data-visualization series on the economics of crime — pairing each project
-        with the methods and reasoning behind it.
-      </p>
-
-      <div class="hero-buttons">
-        <a href="#research" class="button primary">Featured Research</a>
-        <a href="#projects" class="button secondary">Data Projects</a>
-        <a href="writeups.html" class="button secondary">Write-Ups</a>
-        <a href="resume.html" class="button secondary">Resume</a>
-      </div>
+    <section class="hero home-hero">
+      <h1 class="hero-name">
+        Jinyao
+        <span class="hero-seal" lang="zh-Hans">锦尧</span>
+      </h1>
     </section>
   </header>
 
   <main>
-    <!-- =====================================================
-         EDIT PORTFOLIO OVERVIEW HERE
-         This is the short explanation of what the portfolio covers.
-    ===================================================== -->
-    <section class="intro-section">
-      <h2>About This Portfolio</h2>
-
-      <p>
-        This site collects projects spanning computational neuroscience, data visualization,
-        and economic analysis. Each project pairs a deliverable — a research poster, an
-        interactive dashboard, or a written report — with the methods and reasoning behind it.
-      </p>
-
-      <p>
-        Highlights include a 3D computational fluid model of neuro-vascular coupling built during
-        a summer research fellowship at Brown University, and a six-part Tableau series analyzing
-        crime and criminal-justice data. <a href="writeups.html">Read the full write-ups here.</a>
-      </p>
-    </section>
-
     <!-- =====================================================
          EDIT RESEARCH SECTION HERE
          Featured neuro-vascular computational fluid research.
@@ -349,6 +323,37 @@
             </tableau-viz>
           </div>
         </article>
+      </div>
+    </section>
+
+    <!-- =====================================================
+         EDIT ABOUT / PORTFOLIO INTRO HERE
+         Personal introduction and pointers into the portfolio.
+    ===================================================== -->
+    <section id="about" class="about-section">
+      <p class="eyebrow">Pomona College · Project Portfolio</p>
+
+      <h2>Projects across data, science, and economics</h2>
+
+      <p>
+        I am Jinyao DeSandies, a student at Pomona College. This portfolio brings together
+        my work across disciplines — from computational neuroscience research and fluid-dynamics
+        modeling to a data-visualization series on the economics of crime — pairing each
+        deliverable, whether a research poster, an interactive dashboard, or a written report,
+        with the methods and reasoning behind it.
+      </p>
+
+      <p>
+        Highlights include a 3D computational fluid model of neuro-vascular coupling built during
+        a summer research fellowship at Brown University, and a six-part Tableau series analyzing
+        crime and criminal-justice data. <a href="writeups.html">Read the full write-ups here.</a>
+      </p>
+
+      <div class="hero-buttons">
+        <a href="#research" class="button primary">Featured Research</a>
+        <a href="#projects" class="button secondary">Data Projects</a>
+        <a href="writeups.html" class="button secondary">Write-Ups</a>
+        <a href="resume.html" class="button secondary">Resume</a>
       </div>
     </section>
 
