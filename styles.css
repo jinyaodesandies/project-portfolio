@@ -215,9 +215,22 @@ p {
    Selectors carry extra specificity so the generic .hero and
    .hero h1 rules below cannot override the name treatment. */
 .hero.home-hero {
-  padding: clamp(110px, 20vh, 200px) 24px;
+  padding: clamp(72px, 12vh, 130px) 24px;
   display: flex;
   align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+}
+
+.hero-portrait {
+  flex-shrink: 0;
+}
+
+.hero-portrait img {
+  display: block;
+  height: clamp(300px, 46vh, 470px);
+  width: auto;
+  filter: drop-shadow(0 26px 28px rgba(30, 58, 40, 0.25));
 }
 
 .hero h1.hero-name {
@@ -464,6 +477,86 @@ main > section + section {
   color: var(--muted);
   font-size: 1.02rem;
   margin-bottom: 0;
+}
+
+.category-nav {
+  margin-top: 22px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px 26px;
+  font-size: 0.93rem;
+  font-weight: 600;
+}
+
+.project-category {
+  margin-top: 60px;
+}
+
+.category-head {
+  max-width: 720px;
+  padding-top: 26px;
+  border-top: 1px solid var(--border);
+}
+
+.category-head h3 {
+  font-size: 1.7rem;
+  margin-bottom: 8px;
+}
+
+.category-head p {
+  color: var(--muted);
+  margin-bottom: 0;
+}
+
+.category-head + .project-card,
+.project-category .projects-section {
+  margin-top: 28px;
+}
+
+/* Figures attached to a project card */
+.figure-strip {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 22px;
+  padding: 0 34px 30px;
+}
+
+.figure-strip figure {
+  margin: 0;
+}
+
+.figure-strip img {
+  display: block;
+  width: 100%;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  background: #ffffff;
+}
+
+.figure-strip figcaption {
+  margin-top: 8px;
+  font-size: 0.85rem;
+  line-height: 1.55;
+  color: var(--muted);
+}
+
+/* Language tags — hidden for now; change display to flex to show */
+.tag-list {
+  display: none;
+  list-style: none;
+  margin: 18px 0 0;
+  padding: 0;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.tag-list li {
+  background: var(--accent-tint);
+  color: var(--accent-dark);
+  border-radius: 999px;
+  padding: 5px 13px;
+  font-size: 0.8rem;
+  font-weight: 500;
 }
 
 .projects-section {
@@ -916,7 +1009,22 @@ main > section + section {
   }
 
   .hero.home-hero {
-    padding: 80px 20px 88px;
+    padding: 56px 20px 64px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 44px;
+  }
+
+  .hero-portrait img {
+    height: 300px;
+  }
+
+  .project-category {
+    margin-top: 48px;
+  }
+
+  .figure-strip {
+    padding: 0 20px 24px;
   }
 
   .resume-hero {
