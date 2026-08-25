@@ -9,7 +9,12 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link
-    href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&display=swap"
+    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap"
+    rel="stylesheet"
+  />
+  <!-- Noto Serif TC, subset to the two traditional characters of the seal: 錦堯 -->
+  <link
+    href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@700&text=%E9%8C%A6%E5%A0%AF&display=swap"
     rel="stylesheet"
   />
 
@@ -27,6 +32,7 @@
       <div class="nav-links">
         <a href="#research">Research</a>
         <a href="#projects">Projects</a>
+        <a href="#about">About</a>
         <a href="writeups.html">Write-Ups</a>
         <a href="resume.html">Resume</a>
         <a href="#contact">Contact</a>
@@ -36,51 +42,26 @@
 
   <header class="site-header">
     <!-- =====================================================
-         EDIT HOMEPAGE INTRO HERE
-         Change your name, tagline, portfolio description, and buttons.
+         EDIT HOMEPAGE HERO HERE
+         The homepage opens with the name alone; the portfolio
+         introduction lives in the About section further down.
     ===================================================== -->
-    <section class="hero">
-      <p class="eyebrow">Pomona College · Project Portfolio</p>
+    <section class="hero home-hero">
+      <h1 class="hero-name">
+        Jinyao
+        <span class="hero-seal" lang="zh-Hant">錦堯</span>
+      </h1>
 
-      <h1>Projects across data, science, and economics</h1>
-
-      <p class="hero-text">
-        I am Jinyao DeSandies, a student at Pomona College. This portfolio brings together
-        my work across disciplines — from computational neuroscience research and fluid-dynamics
-        modeling to a data-visualization series on the economics of crime — pairing each project
-        with the methods and reasoning behind it.
-      </p>
-
-      <div class="hero-buttons">
-        <a href="#research" class="button primary">Featured Research</a>
-        <a href="#projects" class="button secondary">Data Projects</a>
-        <a href="writeups.html" class="button secondary">Write-Ups</a>
-        <a href="resume.html" class="button secondary">Resume</a>
+      <div class="hero-portrait">
+        <img
+          src="assets/profile-cutout.png"
+          alt="Jinyao DeSandies smiling in Cecil the Sagehen's blue mascot suit"
+        />
       </div>
     </section>
   </header>
 
   <main>
-    <!-- =====================================================
-         EDIT PORTFOLIO OVERVIEW HERE
-         This is the short explanation of what the portfolio covers.
-    ===================================================== -->
-    <section class="intro-section">
-      <h2>About This Portfolio</h2>
-
-      <p>
-        This site collects projects spanning computational neuroscience, data visualization,
-        and economic analysis. Each project pairs a deliverable — a research poster, an
-        interactive dashboard, or a written report — with the methods and reasoning behind it.
-      </p>
-
-      <p>
-        Highlights include a 3D computational fluid model of neuro-vascular coupling built during
-        a summer research fellowship at Brown University, and a six-part Tableau series analyzing
-        crime and criminal-justice data. <a href="writeups.html">Read the full write-ups here.</a>
-      </p>
-    </section>
-
     <!-- =====================================================
          EDIT RESEARCH SECTION HERE
          Featured neuro-vascular computational fluid research.
@@ -142,28 +123,172 @@
     </section>
 
     <!-- =====================================================
-         EDIT DATA-VISUALIZATION PROJECT COLLECTION HERE
-         The Economics of Crime Tableau dashboard series.
-         Each project has:
-         1. project number
-         2. project title
-         3. project description
-         4. Tableau embed link
+         EDIT PROJECT COLLECTION HERE
+         Projects are grouped into categories, each with an
+         anchor id used by the category navigation below the
+         section heading. Language tags (.tag-list) are hidden
+         for now — see styles.css to reveal them.
     ===================================================== -->
     <section id="projects" class="project-collection">
       <div class="collection-intro">
-        <p class="eyebrow">Data Visualization</p>
-        <h2>Economics of Crime · Tableau Dashboard Series</h2>
+        <p class="eyebrow">Projects</p>
+        <h2>Selected Projects</h2>
         <p>
-          A six-part interactive dashboard series built for Econ 120: Economics of Crime at
-          Pomona College, analyzing campus crime, incarceration, national crime trends, gun
-          violence, global terrorism, and an independent project on crimes against humanity.
-          Each dashboard is paired with a written report in the
-          <a href="writeups.html">Write-Ups</a> section.
+          Course and independent work, sorted by field — what each project set out to
+          answer, and how it was built.
         </p>
+
+        <nav class="category-nav" aria-label="Project categories">
+          <a href="#proj-neuro">Computational Neuroscience</a>
+          <a href="#proj-ml">Machine Learning &amp; Games</a>
+          <a href="#proj-dataviz">Data Visualization</a>
+        </nav>
       </div>
 
-      <div class="projects-section">
+      <!-- =========================
+           CATEGORY: Computational Neuroscience
+      ========================= -->
+      <div class="project-category" id="proj-neuro">
+        <div class="category-head">
+          <h3>Computational Neuroscience</h3>
+          <p>
+            How real brains store, manage, and let go of memory — the analytical
+            counterpart to the featured Rush model above.
+          </p>
+        </div>
+
+        <article class="project-card">
+          <div class="project-copy">
+            <p class="project-number">NEUR 122 · Final Paper · December 2025</p>
+            <h3>Anticipating Memory Lapses within the Chickadee&rsquo;s Hippocampal Barcoding</h3>
+            <p>
+              Chickadees remember thousands of food caches, and their hippocampus stamps each
+              caching episode with a unique &ldquo;barcode&rdquo; of neural activity. Reanalyzing
+              the electrophysiology dataset behind Chettih et al.&rsquo;s barcoding discovery, we
+              compressed the firing of caching-related neurons into a signature for each cache,
+              paired every signature with its timestamp, and measured how signatures from the same
+              location drift apart over time &mdash; evidence that the brain actively loosens
+              episode-specific codes to free neurons for new memories.
+            </p>
+
+            <ul class="tag-list">
+              <li>MATLAB</li>
+            </ul>
+
+            <p>
+              <a href="assets/chickadee-memory-lapses.docx" download>
+                Download the paper (Word)
+              </a>
+            </p>
+          </div>
+
+          <div class="figure-strip">
+            <figure>
+              <img
+                src="assets/spike-averaging.png"
+                alt="Bar chart of average barcode firing rate for each cache event in one session"
+              />
+              <figcaption>
+                Average barcode firing rate per cache event, sorted so same-location
+                caches sit side by side.
+              </figcaption>
+            </figure>
+            <figure>
+              <img
+                src="assets/barcode-difference.png"
+                alt="Bar chart showing barcode divergence increasing across three time bins"
+              />
+              <figcaption>
+                Barcodes for the same location drift further apart as more time passes
+                between caches.
+              </figcaption>
+            </figure>
+          </div>
+        </article>
+      </div>
+
+      <!-- =========================
+           CATEGORY: Machine Learning & Games
+      ========================= -->
+      <div class="project-category" id="proj-ml">
+        <div class="category-head">
+          <h3>Machine Learning &amp; Games</h3>
+          <p>
+            Building a game &mdash; and agents that learn to play it the way people do.
+          </p>
+        </div>
+
+        <article class="project-card">
+          <div class="project-copy">
+            <p class="project-number">Independent Research · Human &amp; Machine Learning</p>
+            <h3>Expanding Hexxed: Giving a Game-Playing Agent Spatial Intuition</h3>
+            <p>
+              Hexxed is a cross-platform Unity mini-game built to compare how humans and
+              machine agents learn: players grow each lobe of a hexagon to exactly full
+              size before collecting it, a task that maps cleanly onto a Markov decision
+              process. The research asks why deep&nbsp;Q-learning agents lag behind human
+              intuition &mdash; and tests whether a custom convolutional network, which sees
+              the board as a spatial grid instead of a flattened vector, earns rewards more
+              efficiently by exploiting adjacency the way people naturally do.
+            </p>
+
+            <ul class="tag-list">
+              <li>C#</li>
+              <li>Unity</li>
+              <li>Python</li>
+              <li>PyTorch</li>
+              <li>Stable-Baselines3</li>
+              <li>OpenAI Gym</li>
+            </ul>
+
+            <p>
+              <a href="assets/expanding-hexxed.docx" download>
+                Download the write-up (Word)
+              </a>
+            </p>
+          </div>
+
+          <div class="figure-strip">
+            <figure>
+              <img
+                src="assets/hexxed-mdp.png"
+                alt="3D ball-and-stick diagram of the Hexxed game's Markov decision process"
+              />
+              <figcaption>
+                Level 1 of Hexxed as a Markov decision process: expand the lobe, traverse
+                the hexagon, or collect (after Quendera et al., 2022).
+              </figcaption>
+            </figure>
+          </div>
+        </article>
+      </div>
+
+      <!-- =========================
+           CATEGORY: Data Visualization
+           The Economics of Crime Tableau dashboard series.
+           Each project has:
+           1. project number
+           2. project title
+           3. project description
+           4. Tableau embed link
+      ========================= -->
+      <div class="project-category" id="proj-dataviz">
+        <div class="category-head">
+          <h3>Data Visualization</h3>
+          <p>
+            Economics of Crime &mdash; a six-part interactive dashboard series built for
+            Econ 120 at Pomona College, analyzing campus crime, incarceration, national
+            crime trends, gun violence, global terrorism, and an independent project on
+            crimes against humanity. Each dashboard is paired with a written report in the
+            <a href="writeups.html">Write-Ups</a> section.
+          </p>
+
+          <ul class="tag-list">
+            <li>Tableau</li>
+          </ul>
+        </div>
+
+        <div class="projects-section">
         <!-- =========================
              EDIT PROJECT 1 HERE
              Dashboard: Florida campus crime
@@ -349,6 +474,38 @@
             </tableau-viz>
           </div>
         </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- =====================================================
+         EDIT ABOUT / PORTFOLIO INTRO HERE
+         Personal introduction and pointers into the portfolio.
+    ===================================================== -->
+    <section id="about" class="about-section">
+      <p class="eyebrow">Pomona College · Project Portfolio</p>
+
+      <h2>Projects across data, science, and economics</h2>
+
+      <p>
+        I am Jinyao DeSandies, a student at Pomona College. This portfolio brings together
+        my work across disciplines — from computational neuroscience research and fluid-dynamics
+        modeling to a data-visualization series on the economics of crime — pairing each
+        deliverable, whether a research poster, an interactive dashboard, or a written report,
+        with the methods and reasoning behind it.
+      </p>
+
+      <p>
+        Highlights include a 3D computational fluid model of neuro-vascular coupling built during
+        a summer research fellowship at Brown University, and a six-part Tableau series analyzing
+        crime and criminal-justice data. <a href="writeups.html">Read the full write-ups here.</a>
+      </p>
+
+      <div class="hero-buttons">
+        <a href="#research" class="button primary">Featured Research</a>
+        <a href="#projects" class="button secondary">Data Projects</a>
+        <a href="writeups.html" class="button secondary">Write-Ups</a>
+        <a href="resume.html" class="button secondary">Resume</a>
       </div>
     </section>
 

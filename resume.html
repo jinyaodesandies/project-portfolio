@@ -9,7 +9,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link
-    href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&display=swap"
+    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap"
     rel="stylesheet"
   />
 
@@ -51,16 +51,56 @@
   <main class="resume-main">
     <!-- =====================================================
          EDIT EDUCATION HERE
+         Education is presented as a location pinned on a
+         stylized map. The map graphic is decorative (inline
+         SVG); all real information lives in the .edu-card.
     ===================================================== -->
     <section class="resume-section">
       <h2>Education</h2>
 
-      <div class="resume-item">
-        <h3>Pomona College</h3>
-        <p class="resume-meta">Freshman · Economics</p>
-        <p>
-          Relevant coursework: Econ 120: Economics of Crime.
-        </p>
+      <div class="edu-map">
+        <svg class="edu-map-canvas" viewBox="0 0 800 460" role="img"
+             aria-label="Stylized map with a pin marking Pomona College in Claremont, California"
+             preserveAspectRatio="xMidYMid slice">
+          <!-- soft paper wash + faint parcels -->
+          <rect width="800" height="460" fill="var(--surface-tint)" />
+          <g stroke="var(--border-strong)" stroke-width="1" fill="none" opacity="0.55">
+            <path d="M0 96 H800 M0 200 H800 M0 300 H800 M0 392 H800" />
+            <path d="M150 0 V460 M320 0 V460 M480 0 V460 M650 0 V460" />
+          </g>
+          <!-- green space blocks (campus lawns) -->
+          <g fill="var(--accent)" opacity="0.1">
+            <rect x="340" y="150" width="150" height="120" rx="6" />
+            <rect x="170" y="316" width="120" height="60" rx="6" />
+            <rect x="500" y="96" width="130" height="80" rx="6" />
+          </g>
+          <!-- avenues, drawn thicker where they cross the campus -->
+          <g fill="none" stroke="var(--accent-dark)" stroke-linecap="round" opacity="0.32">
+            <path d="M0 200 H800" stroke-width="7" />
+            <path d="M415 0 V460" stroke-width="7" />
+            <path d="M-20 60 L820 300" stroke-width="3" />
+            <path d="M60 460 L520 -20" stroke-width="3" />
+          </g>
+          <!-- pin: teardrop marker + pulsing halo, over the campus block -->
+          <g transform="translate(470 148)">
+            <ellipse cy="14" rx="20" ry="6" fill="var(--accent-deep)" opacity="0.18" />
+            <circle r="34" fill="var(--accent)" opacity="0.16">
+              <animate attributeName="r" values="26;60;26" dur="3.4s" repeatCount="indefinite" />
+              <animate attributeName="opacity" values="0.24;0;0.24" dur="3.4s" repeatCount="indefinite" />
+            </circle>
+            <path d="M0 12 C-20 -14 -32 -28 -32 -46 A32 32 0 1 1 32 -46 C32 -28 20 -14 0 12 Z"
+                  fill="var(--accent-dark)" stroke="var(--bg)" stroke-width="3" />
+            <circle cy="-46" r="12" fill="var(--bg)" />
+          </g>
+        </svg>
+
+        <div class="edu-card">
+          <p class="edu-coords">34.0967&deg; N, 117.7120&deg; W</p>
+          <h3>Pomona College</h3>
+          <p class="edu-place">Claremont, California</p>
+          <p class="resume-meta">Freshman · Economics</p>
+          <p>Relevant coursework: Econ 120 — Economics of Crime.</p>
+        </div>
       </div>
     </section>
 

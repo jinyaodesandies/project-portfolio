@@ -1,34 +1,34 @@
 /* =========================================================
    DESIGN TOKENS
    One place to tune the whole site: color, type, spacing.
-   Style: warm academic paper + ink, deep navy accent.
+   Style: bamboo paper + green-black ink, bamboo-leaf accent.
 ========================================================= */
 
 :root {
   /* Color */
-  --bg: #faf9f6;
-  --surface: #ffffff;
-  --surface-tint: #f3f0e9;
-  --ink: #24292f;
-  --heading: #14181d;
-  --muted: #5b6470;
-  --accent: #29567d;
-  --accent-dark: #1c3d5c;
-  --accent-deep: #122a3f;
-  --accent-tint: #e8eff5;
-  --border: #e7e2d8;
-  --border-strong: #d6cfc2;
+  --bg: #f4f4e8;
+  --surface: #fcfcf4;
+  --surface-tint: #ecedda;
+  --ink: #2a3028;
+  --heading: #1c231b;
+  --muted: #5d665a;
+  --accent: #3f6d49;
+  --accent-dark: #2f5439;
+  --accent-deep: #1e3a28;
+  --accent-tint: #e2ead9;
+  --border: #dee1c9;
+  --border-strong: #c6cca9;
 
   /* Type */
-  --font-display: "Fraunces", Georgia, "Times New Roman", serif;
+  --font-display: "Cormorant Garamond", Georgia, "Times New Roman", serif;
   --font-sans: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI",
     Helvetica, Arial, sans-serif;
   --font-prose: Charter, Georgia, "Times New Roman", serif;
 
   /* Effects */
-  --shadow-sm: 0 1px 2px rgba(20, 24, 29, 0.05);
-  --shadow-md: 0 1px 2px rgba(20, 24, 29, 0.05),
-    0 14px 34px -14px rgba(20, 24, 29, 0.14);
+  --shadow-sm: 0 1px 2px rgba(28, 35, 27, 0.05);
+  --shadow-md: 0 1px 2px rgba(28, 35, 27, 0.05),
+    0 14px 34px -14px rgba(28, 35, 27, 0.16);
   --radius: 12px;
   --radius-lg: 18px;
 
@@ -95,28 +95,28 @@ h2,
 h3 {
   font-family: var(--font-display);
   color: var(--heading);
-  font-weight: 600;
+  font-weight: 700;
 }
 
 h1 {
   margin: 0;
-  font-size: clamp(1.9rem, 3.4vw, 2.6rem);
-  line-height: 1.12;
-  letter-spacing: -0.015em;
+  font-size: clamp(2.1rem, 3.7vw, 2.9rem);
+  line-height: 1.1;
+  letter-spacing: -0.01em;
 }
 
 h2 {
   margin: 0 0 16px;
-  font-size: clamp(1.55rem, 2.6vw, 1.95rem);
-  line-height: 1.18;
-  letter-spacing: -0.012em;
+  font-size: clamp(1.75rem, 2.9vw, 2.25rem);
+  line-height: 1.16;
+  letter-spacing: -0.008em;
 }
 
 h3 {
   margin: 0 0 10px;
-  font-size: 1.3rem;
-  line-height: 1.28;
-  letter-spacing: -0.008em;
+  font-size: 1.5rem;
+  line-height: 1.26;
+  letter-spacing: -0.004em;
 }
 
 p {
@@ -141,7 +141,7 @@ p {
   position: sticky;
   top: 0;
   z-index: 50;
-  background: rgba(250, 249, 246, 0.85);
+  background: rgba(244, 244, 232, 0.85);
   -webkit-backdrop-filter: blur(12px) saturate(1.5);
   backdrop-filter: blur(12px) saturate(1.5);
   border-bottom: 1px solid var(--border);
@@ -159,8 +159,8 @@ p {
 
 .logo {
   font-family: var(--font-display);
-  font-weight: 600;
-  font-size: 1.08rem;
+  font-weight: 700;
+  font-size: 1.28rem;
   color: var(--heading);
   letter-spacing: -0.01em;
   white-space: nowrap;
@@ -195,15 +195,69 @@ p {
 .site-header {
   background: linear-gradient(
       to bottom,
-      rgba(250, 249, 246, 0),
-      rgba(250, 249, 246, 0.6)
+      rgba(244, 244, 232, 0),
+      rgba(244, 244, 232, 0.6)
     ),
     radial-gradient(
       120% 130% at 85% -20%,
-      rgba(41, 86, 125, 0.09),
+      rgba(63, 109, 73, 0.12),
       transparent 55%
+    ),
+    radial-gradient(
+      90% 120% at 0% 115%,
+      rgba(63, 109, 73, 0.07),
+      transparent 50%
     );
   border-bottom: 1px solid var(--border);
+}
+
+/* Homepage hero: the name alone on bamboo paper.
+   Selectors carry extra specificity so the generic .hero and
+   .hero h1 rules below cannot override the name treatment. */
+.hero.home-hero {
+  padding: clamp(72px, 12vh, 130px) 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+}
+
+.hero-portrait {
+  flex-shrink: 0;
+}
+
+.hero-portrait img {
+  display: block;
+  height: clamp(300px, 46vh, 470px);
+  width: auto;
+  filter: drop-shadow(0 26px 28px rgba(30, 58, 40, 0.25));
+}
+
+.hero h1.hero-name {
+  display: flex;
+  align-items: center;
+  gap: clamp(24px, 4.5vw, 52px);
+  max-width: none;
+  font-size: clamp(3.8rem, 13vw, 10.5rem);
+  line-height: 1;
+  letter-spacing: -0.015em;
+  font-weight: 600;
+}
+
+/* 錦堯 set as a seal stamp: vertical traditional characters, bamboo green */
+.hero-seal {
+  writing-mode: vertical-rl;
+  font-family: "Noto Serif TC", var(--font-display), serif;
+  font-weight: 700;
+  font-size: 0.44em;
+  line-height: 1.06;
+  letter-spacing: 0.09em;
+  color: var(--bg);
+  background: var(--accent-dark);
+  padding: 0.42em 0.26em;
+  border-radius: 0.1em;
+  box-shadow: inset 0 0 0 2px rgba(244, 244, 232, 0.45),
+    0 16px 36px -16px rgba(30, 58, 40, 0.6);
 }
 
 .hero {
@@ -328,11 +382,11 @@ main > section + section {
   grid-template-columns: minmax(0, 5fr) minmax(0, 6fr);
   gap: 44px;
   align-items: center;
-  background: linear-gradient(140deg, #1a3a55 0%, #122a3f 55%, #0e2233 100%);
+  background: linear-gradient(140deg, #2d4d36 0%, #1e3a28 55%, #17301f 100%);
   border-radius: var(--radius-lg);
   padding: 44px;
   box-shadow: var(--shadow-md);
-  color: #c6d2dd;
+  color: #c9d6c3;
 }
 
 .research-card h3 {
@@ -342,11 +396,11 @@ main > section + section {
 }
 
 .research-card .project-number {
-  color: #93b0c7;
+  color: #9dbd9a;
 }
 
 .research-subtitle {
-  color: #a9bccb;
+  color: #aec4a9;
   font-style: italic;
   margin-bottom: 18px;
 }
@@ -356,7 +410,7 @@ main > section + section {
 }
 
 .research-meta {
-  color: #8199ac;
+  color: #8ba287;
   font-size: 0.88rem;
   margin-bottom: 0;
 }
@@ -378,19 +432,19 @@ main > section + section {
 }
 
 .research-card .button.primary {
-  background: #ffffff;
+  background: #f4f4e8;
   color: var(--accent-deep);
 }
 
 .research-card .button.primary:hover {
-  background: #e9eef3;
+  background: #e6e9d6;
   color: var(--accent-deep);
 }
 
 .research-card .button.secondary {
   background: transparent;
   border-color: rgba(255, 255, 255, 0.35);
-  color: #e8eef4;
+  color: #eaf0e4;
 }
 
 .research-card .button.secondary:hover {
@@ -423,6 +477,86 @@ main > section + section {
   color: var(--muted);
   font-size: 1.02rem;
   margin-bottom: 0;
+}
+
+.category-nav {
+  margin-top: 22px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px 26px;
+  font-size: 0.93rem;
+  font-weight: 600;
+}
+
+.project-category {
+  margin-top: 60px;
+}
+
+.category-head {
+  max-width: 720px;
+  padding-top: 26px;
+  border-top: 1px solid var(--border);
+}
+
+.category-head h3 {
+  font-size: 1.7rem;
+  margin-bottom: 8px;
+}
+
+.category-head p {
+  color: var(--muted);
+  margin-bottom: 0;
+}
+
+.category-head + .project-card,
+.project-category .projects-section {
+  margin-top: 28px;
+}
+
+/* Figures attached to a project card */
+.figure-strip {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 22px;
+  padding: 0 34px 30px;
+}
+
+.figure-strip figure {
+  margin: 0;
+}
+
+.figure-strip img {
+  display: block;
+  width: 100%;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  background: #ffffff;
+}
+
+.figure-strip figcaption {
+  margin-top: 8px;
+  font-size: 0.85rem;
+  line-height: 1.55;
+  color: var(--muted);
+}
+
+/* Language tags — hidden for now; change display to flex to show */
+.tag-list {
+  display: none;
+  list-style: none;
+  margin: 18px 0 0;
+  padding: 0;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.tag-list li {
+  background: var(--accent-tint);
+  color: var(--accent-dark);
+  border-radius: 999px;
+  padding: 5px 13px;
+  font-size: 0.8rem;
+  font-weight: 500;
 }
 
 .projects-section {
@@ -485,7 +619,7 @@ main > section + section {
   width: 100%;
   overflow-x: auto;
   border-top: 1px solid var(--border);
-  background: #fbfaf7;
+  background: #fafaef;
   padding: 18px 0;
   display: flex;
   justify-content: flex-start; /* with auto margins on the child this
@@ -499,7 +633,7 @@ main > section + section {
   max-width: 100%;
   margin-left: auto;
   margin-right: auto;
-  background: #fbfaf7;
+  background: #fafaef;
 }
 
 /* =========================================================
@@ -754,6 +888,66 @@ main > section + section {
   font-weight: 500;
 }
 
+/* Education as a pin on a stylized map */
+.edu-map {
+  position: relative;
+  margin-top: 22px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: var(--shadow-sm);
+  min-height: 320px;
+}
+
+.edu-map-canvas {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.edu-card {
+  position: relative;
+  margin: 150px 26px 26px;
+  max-width: 340px;
+  background: rgba(252, 252, 244, 0.92);
+  -webkit-backdrop-filter: blur(6px);
+  backdrop-filter: blur(6px);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 22px 24px;
+  box-shadow: var(--shadow-md);
+}
+
+.edu-card h3 {
+  margin: 0 0 2px;
+}
+
+.edu-coords {
+  margin: 0 0 10px;
+  font-family: var(--font-sans);
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--accent);
+}
+
+.edu-place {
+  margin: 0 0 6px;
+  color: var(--muted);
+}
+
+.edu-card p:last-child {
+  margin-bottom: 0;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .edu-map-canvas animate {
+    display: none;
+  }
+}
+
 .skill-list {
   display: flex;
   flex-wrap: wrap;
@@ -770,6 +964,23 @@ main > section + section {
   padding: 7px 15px;
   font-size: 0.85rem;
   font-weight: 500;
+}
+
+/* =========================================================
+   ABOUT / PORTFOLIO INTRO
+========================================================= */
+
+.about-section {
+  max-width: 720px;
+}
+
+.about-section p {
+  color: var(--muted);
+  font-size: 1.02rem;
+}
+
+.about-section .hero-buttons {
+  margin-top: 28px;
 }
 
 /* =========================================================
@@ -857,6 +1068,25 @@ main > section + section {
     padding: 44px 20px 52px;
   }
 
+  .hero.home-hero {
+    padding: 56px 20px 64px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 44px;
+  }
+
+  .hero-portrait img {
+    height: 300px;
+  }
+
+  .project-category {
+    margin-top: 48px;
+  }
+
+  .figure-strip {
+    padding: 0 20px 24px;
+  }
+
   .resume-hero {
     padding: 36px 20px 44px;
   }
@@ -930,5 +1160,26 @@ main > section + section {
 
   .contact-label {
     flex: none;
+  }
+}
+
+/* =========================================================
+   REDUCED MOTION
+========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  .button,
+  .project-card,
+  .writeup-card {
+    transition: none;
+  }
+
+  .button:hover,
+  .writeup-card:hover {
+    transform: none;
   }
 }
